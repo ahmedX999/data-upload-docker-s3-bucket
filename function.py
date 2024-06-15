@@ -1,3 +1,4 @@
+import os
 def lambda_handler(event, context):
     encrypted_access_key = os.environ['ENCRYPTED_ACCESS_KEY']
     encrypted_secret_key = os.environ['ENCRYPTED_SECRET_KEY']
