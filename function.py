@@ -18,7 +18,7 @@ def lambda_handler(event, context):
     encrypted_secret_key = os.environ.get('ENCRYPTED_SECRET_KEY')
     region = os.environ.get('REGION')
     
-    if not encrypted_access_key or not encrypted_secret_key or not encrypted_region:
+    if not encrypted_access_key or not encrypted_secret_key or not region:
         return {
             'statusCode': 400,
             'body': json.dumps('Les informations d\'identification chiffrées sont requises.')
