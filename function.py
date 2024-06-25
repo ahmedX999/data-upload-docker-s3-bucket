@@ -16,7 +16,7 @@ def decrypt(ciphertext):
 def lambda_handler(event, context):
     encrypted_access_key = os.environ.get('ENCRYPTED_ACCESS_KEY')
     encrypted_secret_key = os.environ.get('ENCRYPTED_SECRET_KEY')
-    encrypted_region = os.environ.get('ENCRYPTED_REGION')
+    region = os.environ.get('REGION')
     
     if not encrypted_access_key or not encrypted_secret_key or not encrypted_region:
         return {
@@ -26,7 +26,7 @@ def lambda_handler(event, context):
 
     access_key = decrypt(encrypted_access_key)
     secret_key = decrypt(encrypted_secret_key)
-    region = decrypt(encrypted_region)
+    region = region
     
     if not access_key or not secret_key or not region:
         return {
