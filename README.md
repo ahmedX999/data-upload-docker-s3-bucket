@@ -9,7 +9,6 @@ This repository contains a Lambda function packaged within a Docker container to
 
 ## Overview
 
-
 This project provides a serverless solution using AWS Lambda and Docker to enable users to connect and upload data from an S3 Bucket. The Lambda function is written in Python and the Docker image ensures all dependencies are included.
 
 ## Features
